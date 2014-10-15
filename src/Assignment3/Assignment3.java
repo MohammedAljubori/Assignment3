@@ -40,7 +40,7 @@ public class Assignment3 {
 				"Choose account type...", "Account Type",
 				JOptionPane.QUESTION_MESSAGE, null, choices, choices[1]);
 
-		do {
+		
 
 			switch (input) {
 
@@ -55,7 +55,7 @@ public class Assignment3 {
 					if (!StaffUser.equals(entereduname) && trials < 3) {
 						JOptionPane.showMessageDialog(null,
 								"Incorrect Username");
-						System.out.println(trials);
+						
 					} else if (trials >= 3) {
 						JOptionPane.showMessageDialog(null, "Contact Admin");
 
@@ -74,9 +74,10 @@ public class Assignment3 {
 								JOptionPane.showMessageDialog(null,
 										"Contact Admin");
 
-							} else
+							} else {
 								JOptionPane.showMessageDialog(null, "Welcome "
 										+ entereduname);
+								trials=3;}
 							break;
 						}
 				}
@@ -93,7 +94,7 @@ public class Assignment3 {
 					if (!AdminUser.equals(entereduname) && trials < 3) {
 						JOptionPane.showMessageDialog(null,
 								"Incorrect Username");
-						System.out.println(trials);
+						
 					} else if (trials >= 3) {
 						JOptionPane.showMessageDialog(null, "Contact Admin");
 
@@ -112,9 +113,10 @@ public class Assignment3 {
 								JOptionPane.showMessageDialog(null,
 										"Contact Admin");
 
-							} else
+							} else{
 								JOptionPane.showMessageDialog(null, "Welcome "
 										+ entereduname);
+								trials=3;}
 							break;
 						}
 				}
@@ -130,7 +132,7 @@ public class Assignment3 {
 					if (!StudentUser.equals(entereduname) && trials < 3) {
 						JOptionPane.showMessageDialog(null,
 								"Incorrect Username");
-						System.out.println(trials);
+						
 					} else if (trials >= 3) {
 						JOptionPane.showMessageDialog(null, "Contact Admin");
 
@@ -149,9 +151,10 @@ public class Assignment3 {
 								JOptionPane.showMessageDialog(null,
 										"Contact Admin");
 
-							} else
+							} else{
 								JOptionPane.showMessageDialog(null, "Welcome "
 										+ entereduname);
+								trials=3;}
 							break;
 						}
 				}
@@ -159,6 +162,6 @@ public class Assignment3 {
 
 			}
 
-		} while (trials > 0);
+		
 	}
 }
