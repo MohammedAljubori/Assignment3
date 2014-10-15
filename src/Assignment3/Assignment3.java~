@@ -88,14 +88,15 @@ public class Assignment3 {
 				 * Admin username check
 				 */
 				while (trials < 3) {
-					trials++;
+					
 					entereduname = JOptionPane
 							.showInputDialog("Enter Username");
 					if (!AdminUser.equals(entereduname) && trials < 3) {
 						JOptionPane.showMessageDialog(null,
 								"Incorrect Username");
+						trials++;
 						
-					} else if (trials >= 3) {
+					} else if (trials >=3) {
 						JOptionPane.showMessageDialog(null, "Contact Admin");
 
 					} else
@@ -103,12 +104,13 @@ public class Assignment3 {
 						 * admin password check
 						 */
 						while (trials < 3) {
-							trials++;
+							
 							enteredpass = JOptionPane
 									.showInputDialog("Enter Password");
 							if (!AdminPass.equals(enteredpass) && trials < 3) {
 								JOptionPane.showMessageDialog(null,
 										"Incorrect Password");
+								trials++;
 							} else if (trials >= 3) {
 								JOptionPane.showMessageDialog(null,
 										"Contact Admin");
@@ -116,8 +118,8 @@ public class Assignment3 {
 							} else{
 								JOptionPane.showMessageDialog(null, "Welcome "
 										+ entereduname);
-								trials=3;}
-							break;
+								System.exit(0);
+							break;}
 						}
 				}
 			}
@@ -151,15 +153,17 @@ public class Assignment3 {
 								JOptionPane.showMessageDialog(null,
 										"Contact Admin");
 
-							} else{
+							} else
+								{
 								JOptionPane.showMessageDialog(null, "Welcome "
 										+ entereduname);
-								trials=3;}
+								trials=3;
+								}
 							break;
 						}
 				}
 			}
-
+			
 			}
 
 		
