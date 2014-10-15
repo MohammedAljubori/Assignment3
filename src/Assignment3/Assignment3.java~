@@ -87,7 +87,7 @@ public class Assignment3 {
 				/**
 				 * Admin username check
 				 */
-				while (trials < 3) {
+				while (trials <= 3) {
 					
 					entereduname = JOptionPane
 							.showInputDialog("Enter Username");
@@ -96,14 +96,14 @@ public class Assignment3 {
 								"Incorrect Username");
 						trials++;
 						
-					} else if (trials >=3) {
+					} else if (trials =3) {
 						JOptionPane.showMessageDialog(null, "Contact Admin");
 
 					} else
 						/**
 						 * admin password check
 						 */
-						while (trials < 3) {
+						while (trials <= 3) {
 							
 							enteredpass = JOptionPane
 									.showInputDialog("Enter Password");
@@ -111,15 +111,15 @@ public class Assignment3 {
 								JOptionPane.showMessageDialog(null,
 										"Incorrect Password");
 								trials++;
-							} else if (trials >= 3) {
+							} else if (trials = 3) {
 								JOptionPane.showMessageDialog(null,
 										"Contact Admin");
 
 							} else{
 								JOptionPane.showMessageDialog(null, "Welcome "
 										+ entereduname);
-								System.exit(0);
-							break;}
+								System.exit(0);}
+							break;
 						}
 				}
 			}
