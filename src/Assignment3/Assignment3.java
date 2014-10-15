@@ -40,33 +40,37 @@ public class Assignment3 {
 			/**
 			 * Staff username check
 			 */
-			while (trials < 3) {
-				trials++;
+			while (trials <= 3) {
+
 				entereduname = JOptionPane.showInputDialog("Enter Username");
 				if (!StaffUser.equals(entereduname) && trials < 3) {
 					JOptionPane.showMessageDialog(null, "Incorrect Username");
-					System.out.println(trials);
-				} else if (trials >= 3) {
+					trials++;
+				} else if ((trials == 3) && (!StaffUser.equals(entereduname))) {
 					JOptionPane.showMessageDialog(null, "Contact Admin");
-
+					System.exit(0);
 				} else
 					/**
 					 * Staff password check
 					 */
-					while (trials < 3) {
-						trials++;
+					while (trials <= 3) {
+
 						enteredpass = JOptionPane
 								.showInputDialog("Enter Password");
 						if (!StaffPass.equals(enteredpass) && trials < 3) {
 							JOptionPane.showMessageDialog(null,
 									"Incorrect Password");
-						} else if (trials >= 3) {
+							trials++;
+						} else if ((trials == 3)
+								&& (!StaffPass.equals(enteredpass))) {
 							JOptionPane
 									.showMessageDialog(null, "Contact Admin");
-
-						} else
+							System.exit(0);
+						} else {
 							JOptionPane.showMessageDialog(null, "Welcome "
 									+ entereduname);
+							System.exit(0);
+						}
 						break;
 					}
 			}
@@ -82,7 +86,7 @@ public class Assignment3 {
 				if (!AdminUser.equals(entereduname) && trials < 3) {
 					JOptionPane.showMessageDialog(null, "Incorrect Username");
 					trials++;
-				} else if ((trials == 3)&&(!AdminUser.equals(entereduname))) {
+				} else if ((trials == 3) && (!AdminUser.equals(entereduname))) {
 					JOptionPane.showMessageDialog(null, "Contact Admin");
 					System.exit(0);
 				} else
@@ -97,7 +101,8 @@ public class Assignment3 {
 							JOptionPane.showMessageDialog(null,
 									"Incorrect Password");
 							trials++;
-						} else if ((trials == 3)&&(!AdminPass.equals(enteredpass))) {
+						} else if ((trials == 3)
+								&& (!AdminPass.equals(enteredpass))) {
 							JOptionPane
 									.showMessageDialog(null, "Contact Admin");
 							System.exit(0);
@@ -116,33 +121,37 @@ public class Assignment3 {
 			/**
 			 * student username check
 			 */
-			while (trials < 3) {
-				trials++;
+			while (trials <= 3) {
+
 				entereduname = JOptionPane.showInputDialog("Enter Username");
 				if (!StudentUser.equals(entereduname) && trials < 3) {
 					JOptionPane.showMessageDialog(null, "Incorrect Username");
-					System.out.println(trials);
-				} else if (trials >= 3) {
+					trials++;
+				} else if ((trials == 3) && (!StudentUser.equals(entereduname))) {
 					JOptionPane.showMessageDialog(null, "Contact Admin");
-
+					System.exit(0);
 				} else
 					/**
 					 * student password check
 					 */
-					while (trials < 3) {
-						trials++;
+					while (trials <= 3) {
+
 						enteredpass = JOptionPane
 								.showInputDialog("Enter Password");
 						if (!StudentPass.equals(enteredpass) && trials < 3) {
 							JOptionPane.showMessageDialog(null,
 									"Incorrect Password");
-						} else if (trials >= 3) {
+							trials++;
+						} else if ((trials == 3)
+								&& (!StudentPass.equals(enteredpass))) {
 							JOptionPane
 									.showMessageDialog(null, "Contact Admin");
-
-						} else
+							System.exit(0);
+						} else {
 							JOptionPane.showMessageDialog(null, "Welcome "
 									+ entereduname);
+							System.exit(0);
+						}
 						break;
 					}
 			}
